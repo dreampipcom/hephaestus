@@ -1,10 +1,9 @@
-git fetch origin
-
 # change to your repo branch to publish
 basebranch="master"
 
 
 # don't bother about what comes next.
+git fetch origin
 currentbranch=$(git symbolic-ref --short -q HEAD)
 
 local="`git log --pretty=%H ...refs/heads/master^ | head -n 1`"
