@@ -6,8 +6,8 @@ basebranch="master"
 git fetch origin
 currentbranch=$(git symbolic-ref --short -q HEAD)
 
-local="`git log --pretty=%H ...refs/heads/master^ | head -n 1`"
-origin="`git ls-remote origin -h refs/heads/master |cut -f1`"
+local="`git log --pretty=%H ...refs/heads/${currentbranch}^ | head -n 1`"
+origin="`git ls-remote origin -h refs/heads/${basebranch} |cut -f1`"
 dirtytree=$(git diff --stat)
 
 echo "your `tput setaf 3;tput smso` local `tput rmso;tput setaf 7` is at: `tput setaf 3;tput smso` ${currentbranch} ${local} `tput rmso;tput setaf 7`"
