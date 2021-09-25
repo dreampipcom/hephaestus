@@ -13,13 +13,13 @@ dirtytree="$(git status --porcelain)"
 echo "your `tput setaf 3;tput smso` local `tput rmso;tput setaf 7` is at: `tput setaf 3;tput smso` ${currentbranch} ${local} `tput rmso;tput setaf 7`"
 echo "your `tput setaf 4;tput smso` origin `tput rmso;tput setaf 7` is at: `tput setaf 4;tput smso` ${publishingbranch} ${origin} `tput rmso;tput setaf 7`"
 
-if [[ "${dirtytree}" != "" ]]; then
-  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` your tree is DIRTY, please don't publish uncommited work. remember, you're about to publish a package version."
+if [[ "${publishingbranch}" != "${currentbranch}" ]]; then
+  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` check if you're in your publishing branch. remember, you're about to publish a package version."
   exit 1
 fi
 
-if [[ "${publishingbranch}" != "${currentbranch}" ]]; then
-  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` check if you're in your publishing branch. remember, you're about to publish a package version."
+if [[ "${dirtytree}" != "" ]]; then
+  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` your tree is DIRTY, please don't publish uncommited work. remember, you're about to publish a package version."
   exit 1
 fi
 
