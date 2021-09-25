@@ -13,10 +13,10 @@ If so, it exits 0 and continues with publishing your package version.
 ## Steps
 
 1. Copy this script to the directory of your convenience.
-2. Make it executable with `chmod +x ./check-git.sh
+2. Make it executable with `chmod +x ./check-git.sh`
 3. Add it to your package.json prePublishOnly script as in:
 ```
-"prepublishOnly": "./check-git.sh && npm run build
+"prepublishOnly": "./check-git.sh && npm run build & ..."
 ````
 
 When you run `npm run publish` next time, if any of the criteria doesn't meet the rules, this script will exit 1 and the publishing of your package will be interrupted.
