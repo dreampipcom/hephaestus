@@ -19,7 +19,7 @@ If so, it exits 0 and continues with publishing your package version.
 "prepublishOnly": "./check-git.sh && npm run build & ..."
 ````
 
-When you run `npm run publish` next time, if any of the criteria doesn't meet the rules, this script will exit 1 and the publishing of your package will be interrupted.
+When you run `npm publish` next time, if any of the criteria doesn't meet the rules, this script will exit 1 and the publishing of your package will be interrupted.
 
 I hope this helps.
 
