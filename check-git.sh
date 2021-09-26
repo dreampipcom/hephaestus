@@ -70,6 +70,8 @@ if [[ "${checknpm}" = 1 ]]; then
       echo "told'ya I'd be useful... mission aborted! :)"
       exit 1
     fi
+  else
+   echo "no version conflicts! :)"
   fi
 fi
   
