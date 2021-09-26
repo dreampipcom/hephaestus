@@ -10,12 +10,12 @@ local="`git log --pretty=%H ...refs/heads/${currentbranch}^ | head -n 1`"
 origin="`git ls-remote origin -h refs/heads/${publishingbranch} | cut -f1`"
 dirtytree="$(git status --porcelain)"
 
-echo "your `tput setaf 4;tput smso` local `tput rmso;tput setaf 7` is at:\n `tput setaf 4;tput smso` ${currentbranch} ${local} `tput rmso;tput setaf 7`"
-echo "your `tput setaf 5;tput smso` origin `tput rmso;tput setaf 7` is at:\n `tput setaf 5;tput smso` ${publishingbranch} ${origin} `tput rmso;tput setaf 7`"
+echo "your `tput setaf 4;tput smso` local `tput rmso;tput setaf 7` is at: `tput setaf 4;tput smso` ${currentbranch} ${local} `tput rmso;tput setaf 7`"
+echo "your `tput setaf 5;tput smso` origin `tput rmso;tput setaf 7` is at: `tput setaf 5;tput smso` ${publishingbranch} ${origin} `tput rmso;tput setaf 7`"
 
 # checks if you're in the right branch
 if [[ "${publishingbranch}" != "${currentbranch}" ]]; then
-  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` check if you're in your publishing branch. \n it's currently set to `tput setaf 5;tput smso` ${publishingbranch} `tput rmso;tput setaf 7`.\n remember, you're about to publish a package version."
+  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` \n check if you're in your publishing branch (which should be `tput setaf 5;tput smso` ${publishingbranch} `tput rmso;tput setaf 7`). \n you're currently in `tput setaf 4;tput smso` ${currentbranch} `tput rmso;tput setaf 7` .\n remember, you're about to publish a package version."
   exit 1
 fi
 
@@ -45,11 +45,13 @@ if [[ $2 = '' ]]; then
 fi
 
 if [[ "${checknpm}" = 1 ]]; then
-  packagename="$(node -p "require('./package.json').name")" 
+  packagename="express"
+  #packagename="$(node -p "require('./package.json').name")" 
   localpackageversion="$(node -p "require('./package.json').version")"
   remotepackageversion="$(npm info ${packagename} versions | grep -w "'${localpackageversion}'" | sed "s/'//g" | sed -e 's/^[ \t]*//' | sed "s/,//")"
+  remotepackagelatest="$(npm show ${packagename} version)"
 
-  if [[ "${packagename}" = '' || "${localpackageversion}" = '' ]]; then
+  if [[ "${packagename}" = '' || "${localpackageversion}" = '' || "${remotepackagelatest}" = '' ]]; then
     echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` we couldn't check your local package against remote. is your package published already? do you have access to it via npm?"
     exit 1
   fi
