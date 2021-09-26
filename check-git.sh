@@ -81,6 +81,6 @@ if [[ "${checknpm}" = 1 ]]; then
 fi
   
 
-echo "`tput setaf 2;tput smso` √ GOOD `tput rmso;tput setaf 7`  to publish, trying to do it in 2 seconds..."
+echo "`tput setaf 2;tput smso` √ GOOD `tput rmso;tput setaf 7`  to publish version `tput setaf 2;tput smso` √ ${localpackageversion} `tput rmso;tput setaf 7`, trying to do it in 2 seconds..."
 sleep 2s
 exit 0
