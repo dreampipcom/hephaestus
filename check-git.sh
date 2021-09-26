@@ -45,8 +45,7 @@ if [[ $2 = '' ]]; then
 fi
 
 if [[ "${checknpm}" = 1 ]]; then
-  packagename="express"
-  #packagename="$(node -p "require('./package.json').name")" 
+  packagename="$(node -p "require('./package.json').name")" 
   localpackageversion="$(node -p "require('./package.json').version")"
   remotepackageversion="$(npm info ${packagename} versions | grep -w "'${localpackageversion}'" | sed "s/'//g" | sed -e 's/^[ \t]*//' | sed "s/,//")"
   remotepackagelatest="$(npm show ${packagename} version)"
