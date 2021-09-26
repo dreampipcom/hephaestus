@@ -21,13 +21,13 @@ fi
 
 # checks if your working tree is clean
 if [[ "${dirtytree}" != "" ]]; then
-  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` your tree is DIRTY, please don't publish uncommited work.\n remember, you're about to publish a package version."
+  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7`\n your tree is DIRTY, please don't publish uncommited work.\n remember, you're about to publish a package version."
   exit 1
 fi
 
 # checks if you're up-to-date with remote
 if [[ "${origin}" != "${local}" ]]; then
-  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7` check if you're up-to-date with remote. \n remember, you're about to publish a package version."
+  echo "`tput setaf 1;tput smso` FAIL `tput rmso;tput setaf 7`\n check if you're up-to-date with remote. \n remember, you're about to publish a package version."
   exit 1
 fi
 
@@ -35,7 +35,7 @@ fi
 checknpm=0
 if [[ $2 = '' ]]; then
   if [[ $1 = '' ]]; then
-    read -p "would you like to check if your package version already exists on NPM? ('y' for yes)" npm
+    read -p "`tput setaf 3;tput smso` would you like to check if your package version already exists on NPM? ('y' for yes)`tput rmso;tput setaf 7` " npm
     if [[ "${npm}" = "Y" || "${npm}" = "y" ]]; then
       checknpm=1
     fi

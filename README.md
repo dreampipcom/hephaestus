@@ -24,9 +24,11 @@ If so, it exits 0 and continues with publishing your package version.
 
 You can pass up to 2 arguments to the script:
 
-1. first argument will force check for npm version conflicts.
-2. second argument will force skip checking for npm version conflicts.
-3. no argument will prompt you if you want to check for npm version conflicts.
+1. first argument will force check for npm version conflicts. (ie. `./check-git.sh npm`)
+2. second argument will force skip checking for npm version conflicts. (ie. `./check-git.sh skip npm`)
+3. no argument will prompt you if you want to check for npm version conflicts. (ie. `./check-git.sh`)
+
+![Example 2 screeshot](https://github.com/angeloreale/npm-prepublish-verify-git/blob/master/screenshot-2.png?raw=true)
 
 When you run `npm publish` next time, if any of the criteria doesn't meet the rules, this script will exit 1 and the publishing of your package will be interrupted.
 
