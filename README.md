@@ -15,18 +15,19 @@ If so, it exits 0 and continues with publishing your package version.
 
 1. Copy this script to the directory of your convenience.
 2. Make it executable with `chmod +x ./check-git.sh`
-3. Add it to your package.json prePublishOnly script as in:
+3. Add it to your package.json prepublishOnly script, as in:
 ```
-"prepublishOnly": "./check-git.sh && npm run build & ..."
+"prepublishOnly": "./check-git.sh main && npm run build & ..."
 ````
 
 ## Options
 
-You can pass up to 2 arguments to the script:
+You can pass from 1 to 3 arguments to the script:
 
-1. first argument will force check for npm version conflicts. (ie. `./check-git.sh npm`)
-2. second argument will force skip checking for npm version conflicts. (ie. `./check-git.sh skip npm`)
-3. no argument will prompt you if you want to check for npm version conflicts. (ie. `./check-git.sh`)
+1. first argument is mandatory and specifies the publishing branch of your repo. (ie. `./check-git.sh main`)
+2. (optional) second argument will force check for npm version conflicts. (ie. `./check-git.sh main npm`)
+3. (optional) third argument will force skip checking for npm version conflicts. (ie. `./check-git.sh main skip npm`)
+4. running without argument will default publishing branch as `main`.
 
 ![Example 2 screenshot](https://github.com/angeloreale/npm-prepublish-verify-git/blob/master/screenshot-2.png?raw=true)
 

@@ -1,8 +1,13 @@
-# change to your repo branch to publish
-publishingbranch="master"
+#!/bin/sh
 
+# change to your repo's default publishing branch or specify it as first argument
+publishingbranch="main"
 
 # don't bother about what comes next.
+if [[ "${1}" != "" ]]; then
+  publishingbranch="${1}"
+fi
+
 git fetch origin
 currentbranch=$(git symbolic-ref --short -q HEAD)
 
@@ -33,8 +38,8 @@ fi
 
 # checks if we need to check for registry version conflicts
 checknpm=0
-if [[ $2 = '' ]]; then
-  if [[ $1 = '' ]]; then
+if [[ $3 = "" ]]; then
+  if [[ $2 = "" ]]; then
     read -p "`tput setaf 3;tput smso` would you like to check if your package version already exists on NPM? ('y' for yes)`tput rmso;tput setaf 7` " npm
     if [[ "${npm}" = "Y" || "${npm}" = "y" ]]; then
       checknpm=1
