@@ -6,7 +6,7 @@ This script is merely to verify that:
 1. You're in the right branch.
 2. Your branch is up-to-date.
 3. Your working tree is not dirty.
-4. (optional) Will check if there is a version of your package already available in you npm registry.
+4. (optional) Will check if there is a version of your package already available in your npm registry.
 
 If so, it exits 0 and continues with publishing your package version.
 
