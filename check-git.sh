@@ -7,7 +7,7 @@ git fetch origin
 currentbranch=$(git symbolic-ref --short -q HEAD)
 
 local="`git log --pretty=%H ...refs/heads/${currentbranch}^ | head -n 1`"
-origin="`git ls-remote origin -h refs/heads/${publishingbranch} |cut -f1`"
+origin="`git ls-remote origin -h refs/heads/${publishingbranch} | cut -f1`"
 dirtytree="$(git status --porcelain)"
 
 echo "your `tput setaf 4;tput smso` local `tput rmso;tput setaf 7` is at:\n `tput setaf 4;tput smso` ${currentbranch} ${local} `tput rmso;tput setaf 7`"
