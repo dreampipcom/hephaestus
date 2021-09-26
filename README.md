@@ -38,5 +38,6 @@ I hope this helps.
 
 Happy coding!
 
-CC-BY 2021 Angelo Reale Caldeira de Lemos
+![CC-BY](https://licensebuttons.net/l/by/4.0/80x15.png)
+2021 Angelo Reale Caldeira de Lemos
 
