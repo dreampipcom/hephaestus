@@ -1,6 +1,6 @@
 # NPM PREPUBLISH VERIFY GIT SHELL SCRIPT
 
-Sometimes we're moving too fast and end up having to publish several package versions consecutively. This adds risks as you might not be with the right branch checked out, or might be outdated with remote. Imagine even, having a dirty working tree, and publishing that. You may end up publishing a version that has dummy code and well, have your consumers really upset with having to bump their versions of your package (and often having to re-deploy their apps).
+Sometimes we're moving too fast and end up having to publish several package versions consecutively. This adds risks as you might not be with the right branch checked out, or might be outdated with remote. Imagine even, having a dirty working tree, and publishing that. You may end up publishing a version that has dummy code and well, you don't want to do that.
 
 This script is merely to verify that:
 1. You're in the right branch.
@@ -39,5 +39,5 @@ I hope this helps.
 Happy coding!
 
 ![CC-BY](https://licensebuttons.net/l/by/4.0/80x15.png)
-2021 Angelo Reale Caldeira de Lemos
+2021 Angelo Reale
 
