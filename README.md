@@ -10,7 +10,7 @@ This script is merely to verify that:
 
 If so, it exits 0 and continues with publishing your package version.
 
-![Example screeshot](https://github.com/angeloreale/npm-prepublish-verify-git/blob/master/screenshot.png?raw=true)
+![Example screenshot](https://github.com/angeloreale/npm-prepublish-verify-git/blob/master/screenshot.png?raw=true)
 ## Steps
 
 1. Copy this script to the directory of your convenience.
@@ -28,7 +28,7 @@ You can pass up to 2 arguments to the script:
 2. second argument will force skip checking for npm version conflicts. (ie. `./check-git.sh skip npm`)
 3. no argument will prompt you if you want to check for npm version conflicts. (ie. `./check-git.sh`)
 
-![Example 2 screeshot](https://github.com/angeloreale/npm-prepublish-verify-git/blob/master/screenshot-2.png?raw=true)
+![Example 2 screenshot](https://github.com/angeloreale/npm-prepublish-verify-git/blob/master/screenshot-2.png?raw=true)
 
 When you run `npm publish` next time, if any of the criteria doesn't meet the rules, this script will exit 1 and the publishing of your package will be interrupted.
 
