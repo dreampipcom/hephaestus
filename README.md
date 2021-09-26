@@ -24,7 +24,7 @@ If so, it exits 0 and continues with publishing your package version.
 
 You can pass up to 3 arguments to the script:
 
-1. first argument specifies the you should be using to publish. (ie. `./check-git.sh main`)
+1. first argument specifies the branch you should be using to publish. (ie. `./check-git.sh main`)
 2. (optional) second argument will force check for npm version conflicts. (ie. `./check-git.sh main npm`)
 3. (optional) third argument will force skip checking for npm version conflicts. (ie. `./check-git.sh main skip npm`)
 4. running without the first argument will default publishing branch as `main`.
