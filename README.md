@@ -22,7 +22,7 @@ If so, it exits 0 and continues with publishing your package version.
 
 ## Options
 
-You can pass from up to 3 arguments to the script:
+You can pass up to 3 arguments to the script:
 
 1. first argument specifies the you should be using to publish. (ie. `./check-git.sh main`)
 2. (optional) second argument will force check for npm version conflicts. (ie. `./check-git.sh main npm`)
