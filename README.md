@@ -22,12 +22,12 @@ If so, it exits 0 and continues with publishing your package version.
 
 ## Options
 
-You can pass from 1 to 3 arguments to the script:
+You can pass from up to 3 arguments to the script:
 
-1. first argument is mandatory and specifies the publishing branch of your repo. (ie. `./check-git.sh main`)
+1. first argument specifies the you should be using to publish. (ie. `./check-git.sh main`)
 2. (optional) second argument will force check for npm version conflicts. (ie. `./check-git.sh main npm`)
 3. (optional) third argument will force skip checking for npm version conflicts. (ie. `./check-git.sh main skip npm`)
-4. running without argument will default publishing branch as `main`.
+4. running without the first argument will default publishing branch as `main`.
 
 ![Example 2 screenshot](https://github.com/angeloreale/npm-prepublish-verify-git/blob/master/screenshot-2.png?raw=true)
 
