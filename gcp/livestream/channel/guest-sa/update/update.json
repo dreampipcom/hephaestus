@@ -1,0 +1,36 @@
+{
+  "elementaryStreams": [
+    {
+      "key": "es_audio",
+      "audioStream": {
+        "codec": "aac",
+        "channelCount": 2,
+        "bitrateBps": 320000
+      }
+    },
+    {
+      "videoStream": {
+        "h264": {
+          "widthPixels": 1920,
+          "heightPixels": 1080,
+          "frameRate": 15,
+          "bitrateBps": 3000000,
+          "profile": "high"
+        }
+      },
+      "key": "es_video_high"
+    },
+    {
+      "videoStream": {
+        "h264": {
+          "widthPixels": 1024,
+          "heightPixels": 576,
+          "frameRate": 15,
+          "bitrateBps": 512000,
+          "profile": "high"
+        }
+      },
+      "key": "es_video_low"
+    }
+  ]
+}

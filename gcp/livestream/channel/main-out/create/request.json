@@ -1,0 +1,70 @@
+{
+  "inputAttachments": [
+    {
+      "key": "default-input",
+      "input": "projects/$LIVESTREAM_PROJECT/locations/europe-west2/inputs/purizu-live"
+    }
+  ],
+  "output": {
+    "uri": "gs://purizu-live-intake"
+  },
+  "elementaryStreams": [
+    {
+      "key": "es_audio",
+      "audioStream": {
+        "codec": "aac",
+        "channelCount": 2,
+        "bitrateBps": 320000
+      }
+    },
+    {
+      "videoStream": {
+        "h264": {
+          "widthPixels": 1920,
+          "heightPixels": 1080,
+          "frameRate": 30,
+          "bitrateBps": 3000000,
+          "profile": "high"
+        }
+      },
+      "key": "es_video_high"
+    },
+    {
+      "videoStream": {
+        "h264": {
+          "widthPixels": 1024,
+          "heightPixels": 576,
+          "frameRate": 30,
+          "bitrateBps": 512000,
+          "profile": "high"
+        }
+      },
+      "key": "es_video_low"
+    }
+  ],
+  "muxStreams": [
+    {
+      "key": "mux_video_low",
+      "container": "ts",
+      "elementaryStreams": ["es_video_low", "es_audio"],
+      "segmentSettings": { "segmentDuration": "2s" }
+    },
+    {
+      "key": "mux_video_high",
+      "container": "ts",
+      "elementaryStreams": ["es_video_high", "es_audio"],
+      "segmentSettings": { "segmentDuration": "2s" }
+    }
+  ],
+  "manifests": [
+    {
+      "fileName": "main.m3u8",
+      "type": "HLS",
+      "muxStreams": [
+        "mux_video_low",
+        "mux_video_high"
+      ],
+      "maxSegmentCount": 5
+    }
+  ]
+}
