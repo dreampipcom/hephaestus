@@ -1,5 +1,5 @@
 # Hephaestus - DreamPip's Toolchain
-What: Scripting all things: Infra, AI, Crawlers
+What: Scripting all things: Configs, Infra, AI, Crawlers
 
 ## Getting Started
 
