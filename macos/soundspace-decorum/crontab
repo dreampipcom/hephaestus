@@ -1,0 +1,1 @@
+* * * * * volume-auto.sh > volume.log 2>$1
