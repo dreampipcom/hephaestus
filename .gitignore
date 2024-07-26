@@ -1,5 +1,7 @@
 # .gitignore
-
+.env
 node_modules/
 .DS_Store
 **/log/*
+**/video_*
+**/init_images/*
