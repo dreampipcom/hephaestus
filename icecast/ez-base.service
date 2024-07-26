@@ -1,0 +1,22 @@
+# /etc/systemd/system/dp-ez-base.service
+
+[Unit]
+Description=EZ Service Base
+Requires=dp-icy.service
+# Requires=dp-gcsfuse.service
+After=dp-icy.service
+# After=dp-gcsfuse.service
+
+[Service]
+User=root
+Type=simple
+RemainAfterExit=yes
+WorkingDirectory=/mnt/audio-archive
+ExecStart=/usr/bin/ezstream -c ez-base.conf
+ExecStop=echo "ez base server stopped..."
+TimeoutStartSec=90
+Restart=always
+StartLimitIntervalSec=60
+StartLimitBurst=3
+[Install]
+WantedBy=multi-user.target

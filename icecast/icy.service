@@ -1,0 +1,20 @@
+# /etc/systemd/system/dp-icy.service
+
+[Unit]
+Description=Icecast Service
+#Requires=dp-gcsfuse.service
+#After=dp-gcsfuse.service
+
+[Service]
+User=root
+Type=simple
+RemainAfterExit=yes
+WorkingDirectory=/root/dp/nexus-icecast
+ExecStart=/usr/bin/icecast2 -c default.conf
+ExecStop=echo "server stopped..."
+TimeoutStartSec=0
+Restart=always
+StartLimitIntervalSec=60
+StartLimitBurst=3
+[Install]
+WantedBy=multi-user.target
