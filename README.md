@@ -4,7 +4,7 @@ What: Scripting all things: Infra, AI, Crawlers
 ## Getting Started
 
 ```
-cp .env.public .env.local
+cp .env.public .env
 
 `shell
 chdmod +x script.sh
