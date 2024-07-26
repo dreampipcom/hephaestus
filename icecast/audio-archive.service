@@ -1,0 +1,21 @@
+# /etc/systemd/system/audio-archive.service
+
+[Unit]
+Description=Audio Archive Service
+Requires=network.target
+After=network.target
+
+[Service]
+User=root
+Type=notify
+RemainAfterExit=yes
+WorkingDirectory=/root
+ExecStart=/usr/bin/rclone --gcs-bucket-policy-only mount --allow-non-empty --vfs-cache-max-age 8h --vfs-cache-mode writes --vfs-cache-max-size 1G --vfs-cache-poll-interval 5m audio-archive:purizu-audio-archive /mnt/audio-archive
+ExecStop=/usr/bin/fusermount -u /mnt/audio-archive
+TimeoutStartSec=1
+Restart=always
+RestartSec=10
+StartLimitIntervalSec=60
+StartLimitBurst=3
+[Install]
+WantedBy=multi-user.target
