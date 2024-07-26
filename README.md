@@ -8,6 +8,7 @@ cp .env.public .env.local
 
 `shell
 chdmod +x script.sh
+./script.sh
 
 `node
 nvm use v20
