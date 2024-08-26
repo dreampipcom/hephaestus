@@ -1,0 +1,16 @@
+{
+  "name": "@dreampipcom/hephaestus/ai/text",
+  "version": "1.0.0",
+  "description": "",
+  "main": "develop-2l.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Angelo Reale",
+  "license": "HPL3-ECO-AND-ANC",
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.54.0",
+    "readline": "^1.3.0"
+  }
+}

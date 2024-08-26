@@ -3,7 +3,7 @@ const fs = require('fs');
 const OpenAi = require("openai");
 const readline = require('readline');
 
-ALL_TRANSLATION_LOCALES = ['en-us']
+ALL_TRANSLATION_LOCALES = ['en-uk', 'es-es']
 
 const params = {
   locale: ALL_TRANSLATION_LOCALES,
@@ -15,89 +15,71 @@ const params = {
 
 const body = {
   en: `
-# Programa Presidencial 0: EM BUSCA DO 1 - Cultura para Funktion Ones (WIP)
+Aos Srs(as). David Callabuig Tortosa, Carlota Hernandez Hernandez e demais domiciliados na minha residência fiscal, nominadamente ao: Carrer de Bismarck 11, 2-1 Barcelona 08024 Spain.
 
-## Introdução
+Endereços:
 
-O Brasil é um país rico em diversidade cultural e talento artístico. No entanto, muitas vezes, esses talentos não têm a oportunidade de brilhar devido à falta de infraestrutura adequada. O programa "EM BUSCA DO 1 - Cultura para Funktion Ones" visa reverter essa realidade, proporcionando aos artistas locais a estrutura necessária para que possam se apresentar de forma digna e profissional, ao mesmo tempo que respeitam as normas de convivência social.
+- David / desconhecido, agente imobiliário, parte acusada;
+- Demais partes citadas, partes acusadas: Carrer de Bismarck 11, 2-1 Barcelona 08024 Spain;
 
-## Objetivo
+De:
 
-Nosso objetivo é democratizar o acesso à cultura e à música de alta qualidade em todo o território nacional. Com um investimento de 300 milhões de reais, que seria equivalente a um único show de uma artista internacional como Madonna, poderíamos adquirir pelo menos 4.000 sistemas de som Funktion Ones. Esses sistemas seriam distribuídos entre clubes e bares em todas as regiões do Brasil, inclusive em municípios mais distantes e de difícil acesso.
+Angelo Reale Caldeira de Lemos
 
-## Infraestrutura Sonora
+Carrer de Bismarck 11, Barcelona
 
-Os sistemas de som Funktion Ones são reconhecidos mundialmente por sua qualidade superior. Ao instalar esses sistemas em clubes e bares, garantimos que os artistas locais terão a oportunidade de se apresentar em palanques de alta qualidade, elevando o nível das apresentações e, consequentemente, atraindo mais público e incentivando a cultura local.
+Assunto: Notificação extra judicial por crimes de agressão física, tortura e abusos psicológicos de vulneráveis, estimulo ao suicídio, sabotagem arbitrária de recursos de infra-estrutura básica (internet e eletricidade), condução coercitiva, detenção ilícita em cativeiro privado, agravadas por conhecimento de condição psíquica caracterizada pelo DSM-5 F30.10, bem como impedimento criminoso do gozo pleno do direito constitucional de livre movimento, ou habeas corpus, bem como falsidade ideológica, tentativa de violação de domicilio, tentativa de incriminação, associação criminosa, negligência ao socorro emergencial, intimidação, violação de privacidade, violação de propriedade privada, ofensa, dentre outros. 
 
-## Cobertura Nacional
+Conteúdo:
 
-Este programa não se restringirá apenas às grandes cidades. Nossa meta é garantir 100% de cobertura municipal, incluindo os rincões mais distantes do interior brasileiro. Todos os municípios terão ao menos um local equipado com os sistemas de som de última geração, assegurando que nenhum artista precise migrar para os grandes centros para ter visibilidade.
+Em vistas:
 
-## Investimento em Isolamento Acústico
+1. Do inicio de contrato de aluguel regular de habitação ao Carrer de Bismarck 11, fato jurídico ocorrido em Março/2024;
+2. Do pagamento regular dos emolumentos referentes ao valor aluguel dentro do prazo (exceto um único atraso de 5 dias em função de eventos imprevistos de ordem maior, garantidos e subsidiados pelo deposito caucional) até a presente data, fato jurídico ipso facto;
+3. Da constituição de domicilio legal e fiscal (por solicitação consular de inscrição anagráfica), fatos jurídicos ocorridos em Abril/2024.
+4. Da disfunção de irregularidade na distribuição do fornecimento de energia elétrica nas premissas da residência desde a primeira semana (quedas injustificadas), fatos jurídicos ocorridos em Março/2024.
+5. Da solicitação formal para aumento de potência nominal do fornecimento de energia elétrica na primeira semana da domiciliação, bem como reiteradas solicitações/lembretes para que garantisse a conclusão do procedimento, e a falsa justificativa da parte do agente imobiliário de que o procedimento não era imediato (e que levaria meses), bem como do conhecimento de que o mesmo procedimento costuma concluír-se no mesmo dia para a maioria das companhias elétricas europeias, bem como minha tentativa de notificar as autoridades do possível crime de 264 e 264bis do CP Espanhol através do 112, em função dos mesmos fatos, fatos jurídicos ocorridos em Abril/2024;
+6. Do compartilhamento da minha condição de F30.10 (DSM-5), ocorrido em Abril/2024;
+7. Da violação da minha privacidade, invadindo o banheiro comum enquanto eu me duchava, e a violação de propriedade privada, ao desligar o meu alto-falante JBL Flip 5 sem o meu consentimento, cometido por Kory e endorsado pelos co-habitantes, bem como a minha tentativa de notificar as forças da ordem através do 112, que não compareceram, ou não colheram o meu depoimento dos fatos, fatos jurídicos ocorridos em Abril/2024;
+8. Da exigência ilegal e injustificada para que eu deixasse a minha residência imediatamente, com base no argumento de incompatibilidade de personalidades (”minha vibe não lhes agradava”), junto a tentativa de violação de domicílio, normalizada após eu acionar a Guarda Civil de Barcelona através do número 112, fatos jurídicos ocorridos em Maio/2024;
+9. Dos reiterados emails ignorados para que discutíssemos as questões pertinentes à convivência de modo que houvéssemos a possibilidade de registrar pauta e ata dos temas a serem discutidos, bem como as deliberações dos co-habitantes, para que garantíssemos a harmonia, a tentativa de realizar tal discussão de modo não rastreável em bar nas proximidades do domicilio, o fato de que após eu consumir o meu café me sentir mal e carecer de auxílio sanitário/médico, o fato de que os co-habitantes ignoraram o meu aviso de incapacidade de seguir com a conversa por motivos de saúde, a negligência ao meu socorro imediato, bem como tentativa de intimidação nesse mesmo evento através de gritos e escândalos na rua, fatos jurídicos ocorridos em Maio/2024;
+10. Da privação da minha liberdade de movimento, mantendo-me sob uso de força nas premissas da cozinha comum, enquanto eu recolhia a minha entrega de almoço, na pausa de almoço na minha jornada laboral, e a tentativa de intimidação, ocorrida por 30 minutos, bem como a minha tentativa de acionar as forças da ordem através do 112, que compareceram horas depois, e de contactar o serviço de emergência consular Italiano em Barcelona, em função da gravidade do crime de sequestro, da condução coercitiva, do impedimento criminoso do gozo pleno do direito constitucional de livre movimento, ou habeas corpus, protocolado pelo mesmo, fatos jurídicos ocorridos em Maio/2024;
+11. Da privação do acesso ao meu domicílio (quarto privado) enquanto eu me duchava, durante o meu expediente laboral utilizando cópia de chave do quarto ilegal em posse seja do agente imobiliário (que se escondeu nas premissas até momento posterior) que de uma co-habitante, o proferimento de ofensas de natureza análoga a tortura psicológica enquanto eu me encontrava no corredor comum, buscando auxílio de profissional especialista em fechaduras; da tentativa de manter seja a mim quanto ao profissional que havia chegado nas premissas para me auxiliar a recuperar o acesso em situação de refém através do uso de força e de agressão física, bem como a minha tentativa de acionar as forças da ordem através do 112, que ignoraram o chamado, fatos ocorridos em Maio/2024.
+12. Da privação da minha liberdade de movimento, mantendo-me sob uso de ameaça e intimidação nas premissas do meu quarto privado, por 5 dias, impedindo, inclusive o provimento de recursos básicos, quando do ato de trancar-me fora da minha residência utilizando chave de acesso que eu não possuo cópia, quando do recebimento de duas parcelas de compras de supermercado através do aplicativo de logística Uber Eats, bem como a minha tentativa de acionar as forças da ordem através do 112, que ignoraram o chamado, assim como os corpos diplomáticos da Republica Italiana e da República Federativa do Brasil, fornecendo relato dos fatos para as respectivas V. Sas. Vice-Cônsules, ao comparecimento de dois agentes da força da ordem a chamado dos corpos consulares mas que não detiveram os criminosos, em função de omisso flagrante, bem como do meu chamado das forças da ordem indicando com maior assertividade emocional a natureza do ocorrido, que compareceram com um esquadrão de operações especiais (5-8 agentes), e da minha tentativa de protocolar denúncia policia na comissaria dos Mossos D’Esquadra de Horta-Guinardó, ignorada pelo agente preceptor, fatos jurídicos ocorridos em Junho/2024;
+13. Da incapacidade de poder retornar a minha residência por direito, através de intimidação, e da privação aos meus bens materiais, com valor nominal e emocional a ser epecificado em seção posterior;
+14. Do que mais constar em devido provimento de inquerito policial, a ser solicitado através de denúcia policial e ao corpo competente (equivalente Espanhol ao Attorney General, ou Ministério Público);
 
-Além da aquisição dos sistemas de som, uma parte significativa do investimento será destinada ao isolamento acústico desses locais e das residências de artistas. Isso permitirá que as apresentações ocorram sem perturbar a vizinhança, garantindo o direito ao sossego de todos. Morar em uma mansão para poder ser artista é um privilégio que poucos podem ter, e nossa proposta é tornar a prática artística mais acessível e democrática.
+Lhes acuso por meio desta de:
 
-## Incentivo à Produção Local
+Crimes de agressão física, tortura e abusos psicológicos de vulneráveis, estimulo ao suicídio, sabotagem arbitrária de recursos de infra-estrutura básica (internet e eletricidade), condução coercitiva, detenção ilícita em cativeiro privado, agravadas por conhecimento de condição psíquica caracterizada pelo DSM-5 F30.10, bem como impedimento criminoso do gozo pleno do direito constitucional de livre movimento, ou habeas corpus, bem como falsidade ideológica, tentativa de violação de domicilio, tentativa de incriminação, associação/organização criminosa, negligência ao socorro emergencial, intimidação, violação de privacidade, violação de propriedade privada, ofensa, dentre outros.
 
-Com o acesso a equipamentos de alta qualidade, os artistas locais terão mais oportunidades de desenvolver suas carreiras. Além de apresentações ao vivo, esses sistemas permitirão gravações de qualidade, fomentando a produção musical e artística local. A cultura brasileira é uma das mais ricas do mundo, e devemos dar aos nossos artistas as ferramentas necessárias para expressar todo o seu potencial.
+Exigindo: 
 
-## Parcerias e Capacitação
+Reparação por danos físicos: 119.600,00£
 
-Para garantir o sucesso do programa, estabeleceremos parcerias com produtores culturais, ONGs, e instituições de ensino. Ofereceremos cursos de capacitação para técnicos de som e produtores locais, assegurando que os equipamentos sejam utilizados de forma otimizada e que a comunidade artística local esteja preparada para aproveitar ao máximo esses recursos.
+Reparação por danos psicológicos: 300.000,00£
 
-## Sustentabilidade e Manutenção
+Reparação por danos morais: 250.000,00£
 
-Por fim, o programa incluirá um plano de manutenção e sustentabilidade para os equipamentos. Estabeleceremos contratos de manutenção preventiva e corretiva, garantindo que os sistemas de som permaneçam em perfeito estado de uso. Além disso, incentivaremos a adoção de práticas sustentáveis, reduzindo o impacto ambiental e promovendo a responsabilidade social.
+Reparação por danos materiais: 200.000,00£
 
-## Conclusão
+Detalhamento do argumento:
 
-O programa "EM BUSCA DO 1 - Cultura para Funktion Ones" representa um passo significativo para a democratização da cultura no Brasil. Com um investimento inteligente e estratégico, podemos transformar a realidade de milhares de artistas e comunidades em todo o país. A música e a arte têm o poder de unir, inspirar e transformar, e é nosso dever como nação proporcionar as condições necessárias para que nosso talento seja ouvido e apreciado.
+O estado de vulnerabilidade social, para que qualifique a negligência do cuidado profilático (do latim philiae) como abandono e/ou abuso de vulnerável, não carece de quadro clínico crônico, nem de interdição legal por incapacidade ou tutoria civil (e.g. por menoridade, outrossim agravando-se como abuso de menores). Muitas vezes o surgimento de quadros clínicos, agudos ou crônicos, podem também ser consequências diretas ou indiretas desses mesmos fatos jurídicos (F30.10), qualificado-os como fatos agravados. 
 
-Angelo REALE CALDEIRA DE LEMOS,
+A suspeita, além dos fatos sobre-citados, de interferência dolosa nos meus afazeres profissionais, sociais, culturais e emocionais, na forma do cancelamento social (com, pelo menos, meus pares, meus amigos, meus familiares, meus empregadores, [Arc.dev](http://Arc.dev) e Hunty Iberica SL), qualificariam ainda, constituição de associação criminosa no caso do núcleo domiciliar. Carecendo de ferramentas para a condução de inquérito policial, delego o apuramento dos fatos para os orgãos competentes.
 
-Barcelona, aos 30 do mês de Maio do ano 2024.
+La factura por los **daños psicologicos se justifica en función de** regresión en la recuperación (F30.10), peoramento del cuadro y impedimento de encontrar la paz y la harmonia para volver a mejorarla.
 
-HPL3-ECO-AND
+La factura por los **daños morales se justifica** en función de estar en situacion de calle, exponerme publicamente por comida, mas de 7 dias sin comer y estado de cetosis, abandono de familiares, dificuldades laborales.
 
-# Programa Presidencial -1: AXIOMA FESTAS (WIP)
+La factura por los **daños materiales se justifica** en función de no conseguir acceder a mi inventario personal que incluye: cartas de la familia del 1700s y 1800s, foto de mi perro, un estudio de musica completo (Ableton Live Push 3, Deep Mind 6, Juno 6, MacMini, 2x Yamaha HS-8, Tibetan Bowl, un acervo de mas de 400s vinilos, incluso raridades, test presses, dubplates, limited numbered releases, y algunas copias únicas en todo el território Europeo.
 
-## Introdução
+Os aferidos fatos deverão ser tratados extra judicialmente através de pagamento imediato dos valores mencionados nas exigência,  ou em comarca de forum penal na cidade de Barcelona.
 
-O Programa AXIOMA FESTAS visa fortalecer a segurança nacional e garantir que a entrada de estrangeiros em território nacional ocorra de maneira ordenada e segura. Este programa propõe um sistema de monitoramento e análise tecnológica para todos os candidatos a vistos, exceto aqueles que buscam asilo humanitário. Através de uma supervisão artificial, utilizando CCTV e monitoramento de áudio 24/7 durante um período de um ano, poderemos assegurar que apenas indivíduos com intenções legítimas e comportamentos apropriados sejam autorizados a ingressar no país.
+Londres aos 26 de agosto de 2024,
 
-## Objetivo
-
-O principal objetivo do AXIOMA FESTAS é proteger a integridade e a segurança do território nacional, prevenindo a entrada de indivíduos que possam representar uma ameaça. Ao implementar um sistema de monitoramento rigoroso e análise tecnológica, pretendemos filtrar eficazmente os candidatos a vistos, garantindo que apenas aqueles que passam nos critérios de segurança entrem no país.
-
-## Metodologia
-
-Para a execução do AXIOMA FESTAS, será utilizada a colaboração entre estados (MUV) no compartilhamento do sistema de monitoramento contínuo através de câmeras CCTV e gravação de áudio. Este monitoramento deverá ser oferecido da data da requisição + o periodo de 1 ano anterior à mesma, para cada candidato a visto. Os dados coletados serão analisados por uma inteligência artificial avançada, capaz de identificar comportamentos suspeitos e potenciais ameaças. A análise incluirá padrões de fala, atividades diárias e interações sociais.
-
-## Exceções
-
-O programa prevê exceções para indivíduos que buscam asilo humanitário. Esses candidatos serão submetidos a um período de quarentena de um ano em vilas dedicadas, onde poderão ser monitorados em um ambiente controlado. Esta medida visa garantir a segurança tanto dos candidatos quanto da população nacional, enquanto se oferece um refúgio seguro para aqueles que realmente necessitam.
-
-## Implementação
-
-A implementação do AXIOMA FESTAS será realizada em fases. Na primeira fase, serão anunciadas as intenções de inclusão em determinada Carta MVU através das principais embaixadas e consulados.  A segunda fase envolverá o desenvolvimento (junto ao Robocob Sensor) e integração completa do sistema de análise artificial, garantindo que todos os dados coletados sejam processados de maneira justa, humana, eficiente e segura. Na terceira fase, serão oferecidos os canais de solicitação de visto para estrangeiros, implementado o filtro e ampliada a cobertura para incluir todos os pontos de entrada no território nacional, como aeroportos e portos.
-
-## Benefícios Esperados
-
-Com a implementação do AXIOMA FESTAS, espera-se uma redução significativa na entrada de indivíduos que possam representar uma ameaça à segurança nacional e uma perturbação aos valores nacionais (a ordem, o progresso e a liberdade de expressão). Além disso, o programa proporcionará uma triagem mais eficiente e justa dos candidatos a vistos, permitindo que aqueles com intenções legítimas e comportamentos adequados entrem no país. A longo prazo, este programa contribuirá para a manutenção das liberdades, da paz e da segurança no território nacional.
-
-## Considerações Éticas
-
-Reconhecemos que a implementação de um sistema de monitoramento tão rigoroso levanta questões éticas importantes. Portanto, garantiremos que todas as medidas de privacidade sejam respeitadas e que o uso dos dados coletados seja estritamente limitado aos propósitos de segurança nacional e preservação dos valores ocidentais. Serão estabelecidos mecanismos de supervisão e auditoria para garantir a transparência e a responsabilidade no uso do sistema.
-
-## Conclusão
-
-O AXIOMA FESTAS representa um passo importante na modernização e fortalecimento da segurança nacional. Através do uso de tecnologia avançada e inteligência artificial, poderemos proteger melhor nossas fronteiras e garantir que apenas indivíduos com intenções legítimas e comportamentos adequados entrem no país. Este programa é uma demonstração do nosso compromisso com a segurança e o bem-estar de todos os cidadãos.
-
-Angelo REALE CALDEIRA DE LEMOS,
-
-Barcelona, aos 30 do mês de Maio do ano 2024.
-
-HPL3-ECO-AND
+Angelo.
 `,
   it: "",
   pt: "",
@@ -156,9 +138,9 @@ class ProgressBar {
   // Update the progress bar and display
   update() {
     this.current += 1;
-    const percentage = Math.floor((this.current / this.total) * 100);
-    const progress = '#'.repeat(percentage);
-    const empty = ' '.repeat(100 - percentage);
+    const percentage = Math.floor((this.current / this.total) * 100, ) > 0 ? Math.floor((this.current / this.total) * 100) : 100;
+    const progress = '#'.repeat(Math.max(percentage, 0));
+    const empty = ' '.repeat(Math.max((100 - percentage), 0));
 
     // Move cursor to the beginning of the line
     readline.cursorTo(process.stdout, 0);
@@ -235,13 +217,13 @@ const translate = async ({ array, length, locale }) => {
     const translatePrompt = `Array to Translate: \`\`\`${JSON.stringify(array)}\`\`\` from ${params.srcLocale} to "${localeMap[locale] || locale} p.s. please don't include the original array in your answer, keep double quotes as the array elements delimiter, don't allow double quotes inside array elements, preserve the array lengths even if they're empty strings or urls.`
     let completion = await getChat({ prompt: translatePrompt, context, temperature: 0.5 })
 
-  console.log(completion)
+   console.log(completion)
 
     const reply = completion.choices[0].message?.content
-   console.log("before split", {translatePrompt, reply, answer, array})
-   const split = `["` + reply.split(`["`)[1].split(`"]`)[0] + `"]`
-   console.log( {split})
-   answer = JSON.parse(split)
+    console.log("before split", {translatePrompt, reply, answer, array})
+    const split = `["` + reply.split(`["`)[1].split(`"]`)[0] + `"]`
+    console.log( {split})
+    answer = JSON.parse(split)
 
     if(answer.length !== array.length) {
       console.log( {translatePrompt, reply, answer, array})
@@ -283,7 +265,7 @@ const doTranslations = async ({ locale }) => {
     //const strArray = TEST_PROMPT
   
     const chunks = chunkArray(strArray, params?.chunkSize);
-    progressBar = new ProgressBar(chunks.length);
+    progressBar = new ProgressBar(strArray.length);
     const promises = chunks.map((e) => getTranslations({ array: e, locale }))
      console.log({ chunks })
     let translated = [];
@@ -294,7 +276,9 @@ const doTranslations = async ({ locale }) => {
         const flat = results.flat(1)
         const strBuffer = flat.join("\n")
 
-        fs.writeFileSync(`./output/long-translate.json`, JSON.stringify(flat, null, 4), 'utf-8');
+        fs.writeFileSync(`./output/long-translate-${locale}.json`, JSON.stringify(flat, null, 4), {
+            flag: 'w'
+          });
         console.log('All promises have been fulfilled!', results);
         resolve()
       })

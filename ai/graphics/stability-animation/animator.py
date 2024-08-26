@@ -3,16 +3,17 @@ from stability_sdk.animation import AnimationArgs, Animator
 from stability_sdk.utils import create_video_from_frames
 from tqdm import tqdm
 import math
+import os
 from datetime import datetime
 
 length_in_seconds = 4
 fps = 8
 base_prompt="hyper realism, hyper detailed, octane render, unreal engine, raytracing, volumetric lighting, cinematic lighting, soft natural lighting, visual clarity, tone mapping, color grading, enhance, retouch"
 positive_prompts = [
-    "someone stopping a train",
-    "an african someone stopping a train",
-    "an african someone stopping a rocket",
-    "someone stopping a black rocket"
+    "a yoga class in a biergarten",
+    "a yoga class with sunbeams",
+    "a karate class in a biergarten",
+    "a karate class with sunbeams"
 ]
 zoom_evolution = [2, 10, 20, 30]
 angle_evolution = [1, 2, 3, 4]
@@ -50,7 +51,8 @@ def generate_keyframe_string(total_frames, values, lower=False):
     return quarter_string
 
 STABILITY_HOST = "grpc.stability.ai:443"
-STABILITY_KEY = $STABILITY_KEY # API key from https://platform.stability.ai/account/keys
+STABILITY_KEY = os.environ.get("STABILITY_KEY") # API key from https://platform.stability.ai/account/keys
+
 
 api_context = api.Context(STABILITY_HOST, STABILITY_KEY)
 
@@ -62,13 +64,13 @@ args.width = 1024
 args.height =768
 args.max_frames = length_in_seconds * fps
 args.seed = 42
-args.strength_curve = "0:(0)"
+args.strength_curve = "0:(0.65)" #previous frames strength
 args.diffusion_cadence_curve = "0:(0)"
 args.cadence_interp = "film"
 args.fps = fps
 args.preset = "3d-model" #None, 3d-model, analog-film, anime, cinematic, comic-book, digital-art, enhance fantasy-art, isometric, line-art, low-poly, modeling-compound, neon-punk, origami, photographic, pixel-art
 # args.video_init_path = ""  #if you want to start with a video
-# args.init_image = "init_images/05.jpeg"  #if you want to start with an image
+args.init_image = "init_images/01.jpeg"  #if you want to start with an image
 args.init_sizing = "cover"
 args.steps_curve = generate_keyframe_string(args.max_frames, [80, 50, 50, 50], 30)
 
