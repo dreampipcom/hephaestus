@@ -35,7 +35,7 @@
 ### settings
 
 # icecast status URL
-URL='127.0.0.0:8002/status.xsl'
+URL='127.0.0.7:8002/status-json.xsl?mount=/main'
 
 # filename of stream
 TEXTTOSEARCH='main'
