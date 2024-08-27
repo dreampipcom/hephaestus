@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ##############################################################################
 ## Based off: Darkice Watchdog
 ##
@@ -59,14 +59,16 @@ CURL=`which curl`
 DATE=$(date)
 
 CUR=$($CURL --connect-timeout ${TIMEOUT} --max-time ${TIMEOUT} -3 --silent ${URL}) 
-TEST=$(echo $CUR | grep ${TEXTTOSEARCH}) 
+TEST="$(echo $CUR | grep ${TEXTTOSEARCH})"
 # If not zero, server is OK 
 if [[ ! $TEST == "" ]]; then 
 	echo $DATE "- stream is OK" >> $LOGFILE; 
 else
 	echo $DATE "- stream down - restart" >> $LOGFILE;
 	#restart dp:euterpe
-	service remo-icy restart
-	service remo-ez restart
+	service remo-icy stop
+	service remo-ez stop
 	sleep $SLEEP
+	service remo-icy start
+	service remo-ez start
 fi
